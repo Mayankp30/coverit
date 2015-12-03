@@ -156,23 +156,23 @@ module.exports = function(app, passport) {
         });
     });
 
-    // facebook -------------------------------
-    app.get('/unlink/facebook', isLoggedIn, function(req, res) {
-        var user            = req.user;
-        user.facebook.token = undefined;
-        user.save(function(err) {
-            res.redirect('/profile');
-        });
-    });
+    // // facebook -------------------------------
+    // app.get('/unlink/facebook', isLoggedIn, function(req, res) {
+    //     var user            = req.user;
+    //     user.facebook.token = undefined;
+    //     user.save(function(err) {
+    //         res.redirect('/profile');
+    //     });
+    // });
 
-    // twitter --------------------------------
-    app.get('/unlink/twitter', isLoggedIn, function(req, res) {
-        var user           = req.user;
-        user.twitter.token = undefined;
-        user.save(function(err) {
-            res.redirect('/profile');
-        });
-    });
+    // // twitter --------------------------------
+    // app.get('/unlink/twitter', isLoggedIn, function(req, res) {
+    //     var user           = req.user;
+    //     user.twitter.token = undefined;
+    //     user.save(function(err) {
+    //         res.redirect('/profile');
+    //     });
+    // });
 
     // google ---------------------------------
     app.get('/unlink/google', isLoggedIn, function(req, res) {
